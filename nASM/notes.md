@@ -11,7 +11,7 @@ Let's first install **gcc** and **nasm** in our machines , as of yet we don't ne
 
 Lets execute the 1test.asm to see if our installs are successful.[PS Note: the code here work only on x86 Linux machines]
 	this picture blew this sentence is of utmost importance to understand out compiling command
-	![](https://static.javatpoint.com/cpages/images/compilation-process-in-c2.png)
+	![](https://static.javatpoint.com/cpages/images/compilation-process-in-c2.png)<br><br>
 	But we write out code directly in ASM and with the command <br>
 		<center><code>nasm -felf64 1test.asm</code> <br></center>
 		we get out object file often called elf type files , After that command you would now have a "1test.o" file. Note that the "1test.o" is not yet executable , ***go ahead and try it!*** .
@@ -25,7 +25,7 @@ Now, let do our linker command :<br>
 ## Assembly code structure
 
 Like most assemblers, each NASM source line contains some combination of four fields<br>
-![](https://cs.lmu.edu/~ray/images/nasmstructure.png)
+![](https://cs.lmu.edu/~ray/images/nasmstructure.png)<br><br>
 So to make our life's a bit easier lets break down this code in terms of columns and rows.
 
 There can be many columns called sections , There is a different kind of section called "Directive" , Unlike most assembly code directive columns don't have 4 rows.
