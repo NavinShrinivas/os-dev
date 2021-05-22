@@ -52,6 +52,6 @@ The **bss** section is used for declaring variables. The syntax for declaring bs
 
 ### The _text_ section
 The **text** section is used for keeping the actual code. This section must begin with the declaration **global _start**, which tells the kernel where the program execution begins.
-The syntax for declaring text section is −
-![]()
+The syntax for declaring text section is − <br>
+![](https://github.com/NavinShrinivas/os-dev/blob/main/nASM/Screenshot%20from%202021-05-22%2017-36-14.png) <br><br>
 
