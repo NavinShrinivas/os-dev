@@ -1,0 +1,5 @@
+https://littleosbook.github.io/#first-steps
+
+https://github.com/tuhdo/os01 | https://github.com/cfenollosa/os-tutorial
+
+intel x86 instruction : https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html
