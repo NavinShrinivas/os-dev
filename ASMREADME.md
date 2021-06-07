@@ -1,5 +1,6 @@
 
 # Learning Assembly
+All writing is supported by practical code in [here](https://github.com/NavinShrinivas/os-dev/tree/main/nASM) , so go ahead and open it in a seperate tab.
 ## links used
 
 *  [Official nASM docs](https://www.nasm.us/doc/) and [this](https://cs.lmu.edu/~ray/notes/nasmtutorial/) , It's nice.
