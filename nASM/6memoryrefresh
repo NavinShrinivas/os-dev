@@ -1,0 +1,24 @@
+REGISTER FOR SYSCALL IN 64BIT SYSTEMS:
+--------------------------------------
+rax -> rdi -> rsi -> rdx
+rax -> SYSCALL
+rdi -> 1st parameter
+rsi -> 2nd parameter
+rdx -> 4th parameter
+
+
+64BIT SYSCALLS : https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
+----------------------------------------------------------------------------------------
+1-sys_write
+60-sysexit
+
+
+SYS_WRITE PARAMETERS:
+----------------------
+https://filippo.io/linux-syscall-table/
+this is your best shot , I will try my best to explain each syscalls parameter
+
+1)SYS_WRITE [rax -> 1]
+    1 -> output buffer | 1 for STDOUT
+    2 -> data to be written
+    3 -> number of bytes to write
