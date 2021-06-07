@@ -1,28 +1,15 @@
 # os-dev
-
 A repo holding my process of [fingers crossed] creating my own os, eqquiped witht the basic knowledge of c and the will to learn nAsm I think I got this!
-
-  
-
 # Learning Assembly
-
-  
-
-## links used :
-
-  
+## links used
 
 *  [Official nASM docs](https://www.nasm.us/doc/) and [this](https://cs.lmu.edu/~ray/notes/nasmtutorial/) , It's nice.
 
 * Majorly using [this](https://www.tutorialspoint.com/assembly_programming/assembly_basic_syntax.htm) for starting out!All other resources seem too intimidatiing!But the code will vary from the ones given in this site as its 32 bit based.
-* Also found [this](https://asmtutor.com/) , seem really nice bus again it is in x86_32bit , but super helpful 
 
-
-  
+* Also found [this](https://asmtutor.com/) , seem really nice bus again it is in x86_32bit , but super helpful
 
 ## Assembling code :
-
-  
 
 Let's first install **gcc** and **nasm** in our machines , as of yet we don't need a vm.
 
@@ -30,15 +17,25 @@ Let's first install **gcc** and **nasm** in our machines , as of yet we don't ne
 
 Lets execute the 1test.asm to see if our installs are successful.[PS Note: the code here work only on x86 Linux machines]
 
+  
+
 this picture blew this sentence is of utmost importance to understand out compiling command
 
+  
+
 ![](https://static.javatpoint.com/cpages/images/compilation-process-in-c2.png)<br><br>
+
+  
 
 But we write out code directly in ASM and with the command <br>
 
 <center><code>nasm -felf64 1test.asm</code> <br></center>
 
+  
+
 we get out object file often called elf type files , After that command you would now have a "1test.o" file. Note that the "1test.o" is not yet executable , ***go ahead and try it!*** .
+
+  
 
 That's because we haven't linked all the needed libraries for our assembly code to work. Enter the ```ld``` command , this command is part of gcc compiler and will help us link libraries to our assembly code. Also the option "felf64" in nasm assembler is to get a 64 bit based elf file.
 
@@ -46,19 +43,25 @@ Now, let do our linker command :<br>
 
 <center><code>ld -o 1final.o ./1test.o</code> <br></center>
 
+  
+
 We now have out executable code , lets execute it with<br>
 
 <center><code>./1final.o</code> <br></center>
+
+  
 
 You have now assembled your first assembly code. Congrats!
 
 ## Assembly code structure
 
-  
-
 Like most assemblers, each NASM source line contains some combination of four fields<br>
 
+  
+
 ![](https://cs.lmu.edu/~ray/images/nasmstructure.png)<br><br>
+
+  
 
 So to make our life's a bit easier lets break down this code in terms of columns and rows.
 
@@ -69,6 +72,8 @@ There can be many columns called sections , There is a different kind of section
   
 
 Generally, you put code in a section called `.text` and your constant data in a section called `.data`.
+
+  
 
 And coming to normal sections they have at most 4 rows,in the order :
 
@@ -86,6 +91,8 @@ A little bit more about sections:
 
 The **data** section is used for declaring initialized data or constants. This data does not change at runtime. You can declare various constant values, file names, or buffer size, etc., in this section.
 
+  
+
 The syntax for declaring data section is −
 
 <center><code>section.data</code></center>
@@ -96,6 +103,8 @@ The syntax for declaring data section is −
 
 The **bss** section is used for declaring variables. The syntax for declaring bss section is −
 
+  
+
 <center><code>section.bss</code></center>
 
   
@@ -104,8 +113,16 @@ The **bss** section is used for declaring variables. The syntax for declaring bs
 
 The **text** section is used for keeping the actual code. This section must begin with the declaration **global _start**, which tells the kernel where the program execution begins.
 
+  
+
 The syntax for declaring text section is − <br>
 
+  
+
 ![](https://github.com/NavinShrinivas/os-dev/blob/main/nASM/Screenshot%20from%202021-05-22%2017-36-14.png) <br><br>
-This right here was a brief introduction to Assembly , But we hgave not even started scartching the surface of the world of Asm .
-From here on I expect you to follow the numbering in the nAsm folder and learn to implement those programs one by one, Any video or slide I make will be listed down lineraly form here on,See you on the other side :) .
+
+  
+
+This right here was a brief introduction to Assembly , But we hgave not even started scratching the surface of the world of Asm .
+
+From here on I expect you to follow the numbering in the nAsm folder and learn to implement those programs one by one, Any video or slide I make will be listed down linearly form here on,See you on the other side :) .
