@@ -1,5 +1,5 @@
 section .data
-    msg db "Let's try and make this a long string just for the reason",10
+    msg db "Let's try and make this a long string just for the 2 reason",10,"this is an extention"
 
 section .text
     global _start:
@@ -27,4 +27,4 @@ done:
     pop rsi
     ret
 
-
+    ;all string or db's are terminated by a 0 which iin ascii stands for NULL
