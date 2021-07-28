@@ -22,3 +22,8 @@ this is your best shot , I will try my best to explain each syscalls parameter
     1 -> output buffer | 1 for STDOUT
     2 -> data to be written
     3 -> number of bytes to write
+
+NASM Functions/Instructions:  [VERY IMPORTANT]
+----------------------------
+
+-($-$$) gives the size of the current segment so far , $$ simply gives the offset of current line

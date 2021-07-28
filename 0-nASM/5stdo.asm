@@ -1,7 +1,7 @@
 ;-----------------finds the len-----------------
 slen:
-    push rsi
-    mov rsi,rax
+    push rax
+    mov rax,rsi
 next:
     cmp byte[rax],0
     jz end
@@ -10,15 +10,14 @@ next:
 end:
     sub rax,rsi
     mov rdx,rax ;rdx has the len now
-    pop rsi ;rsi has the message recieved from the main prgrm
+    pop rax
     ret
 
 ;-----------Print the msg-------------
 sprint:
-    mov rax,rsi
+    mov rax,1
+    mov rdi,1
     call slen
-    mov rax,1 ;syscalll for print
-    mov rdi,1   ;stdout
     syscall
     ret
 ;------------Exit call----------
